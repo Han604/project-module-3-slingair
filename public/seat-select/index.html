@@ -13,8 +13,24 @@
             </div>
             <div class="flight-select">
                 <label for="flight">Flight Number :</label>
-                <input name="flight" id="flight" class="flight" type="text" placeholder="flight #" />
+                <select class="flight" id="flight" name="flight">
+                    <option>Pick flight</option>
+                    <option value="SA231">SA231</option>
+                    <option value="SA072">SA072</option>
+                    <option value="SA123">SA123</option>
+                    <option value="SA301">SA301</option>
+                    <option value="SA666">SA666</option>
+                    <option value="SA678">SA678</option>
+                </select>
             </div>
+            <h2>Already have a flight?</h2>
+            <form id="user-reference" class="content" name="salesForm" onsubmit="handleReference(event)">
+                <div class="form-item">
+                    <label for="referenceOrEmail">Booking number or email</label>
+                    <input id='reference' name='reference' placeholder='Booking number or email'type="text">
+                </div>
+                <button id="reference-button" type="submit" class="button confirm">submit</button>
+            </form>
             <div class="form-container">
                 <h2>Select your seat and Provide your information!</h2>
                 <form id="seats" class="content" name="salesForm" onsubmit="handleConfirmSeat(event)">
